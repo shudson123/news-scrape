@@ -1,3 +1,13 @@
+$("#scrapeButton").on("click", function() {
+  $.ajax({
+      method: "GET",
+      url: "/scrape",
+  }).done(function(data) {
+      console.log(data)
+      window.location = "/"
+  })
+  location.reload();
+});
 
 $.getJSON("/articles", function(data) {
 

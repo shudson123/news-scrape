@@ -21,8 +21,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/crackedScraper");
 
-
-app.get("/scrape", function(req, res) {
+app.get('/scrape', function(req, res) {
  
   axios.get("http://www.cracked.com/").then(function(response) {
 
